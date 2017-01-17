@@ -8,17 +8,14 @@
 		var $elem = $(element);
 		// Référence à l'élément HTML que le plugin affecte
 		var elem = element;
-
 		// Mise en place des options par défaut et/ou en attributs data de $elem
 		var defaults = {
 			end: ($elem.attr('data-end') && $elem.attr('data-end') != '') ? $elem.attr('data-end') : 2 
-		};
-		
+		};		
 		// La méthode dite "constructeur" qui sera appelée lorsque l'objet sera crée
 		plugin.init = function() {
 			// on stocke les options dans un objet en fusionnant les options par defaut et celles ajoutées en parametre
 			plugin.o = $.extend({}, defaults, options);
-
 			function  testScroll(){
 				scrolled = $(window).scrollTop();
 				windowHeight = $(window).height();
@@ -35,7 +32,6 @@
 			testScroll();
 			parallaxit();
 		}
-
 		// Ici on va coder nos méthodes privées / publiques
 		//publiques : plugin.nomFonction = function(){}
 		//privées : var nomFonction = function(){}
