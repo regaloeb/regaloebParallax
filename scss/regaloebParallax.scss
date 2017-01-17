@@ -21,6 +21,7 @@ h1, h2, h3, h4, h5, h6{
 	margin: 0;
 	padding: 0;
 }
+
 .page-content{
 	overflow-x: hidden;
 }
@@ -49,7 +50,7 @@ h1, h2, h3, h4, h5, h6{
 
 .bg-test{
 	width: 100%;
-	min-height: 300px;
+	min-height: 100vh;
 	padding: 25px;
 	margin-top: 25px;
 	
@@ -83,6 +84,9 @@ h1, h2, h3, h4, h5, h6{
 	
 	h1{
 		font-size: 3vw;
+		@media (max-width: 500px){
+			font-size: 3rem;
+		}
 	}
 	
 	i{
