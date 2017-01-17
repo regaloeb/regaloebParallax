@@ -40,7 +40,11 @@
 		var windowHeight = $(window).height();
 		var top = Math.round($elem.offset().top);
 		var h = Math.round($elem.outerHeight());
-		
+		//IE version
+		var isIE = function() {
+			var myNav = navigator.userAgent.toLowerCase();
+			return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+		}
 		var parallaxit = function(){			
 			var distance = scrolled + windowHeight - top;
 			
@@ -68,10 +72,20 @@
 			
 			if(translateX != 0 || translateY != 0){
 				if(cssparam.transform){
-					cssparam.transform += 'translate3d(' + translateX + ', ' + translateY + ', 0) ';
+					if(isIE() && isIE() <= 9){
+						cssparam.transform += 'translate(' + translateX + ', ' + translateY + ') ';
+					}
+					else{
+						cssparam.transform += 'translate3d(' + translateX + ', ' + translateY + ', 0) ';
+					}
 				}
 				else{
-					cssparam.transform = 'translate3d(' + translateX + ', ' + translateY + ', 0) ';
+					if(isIE() && isIE() <= 9){
+						cssparam.transform = 'translate(' + translateX + ', ' + translateY + ') ';
+					}
+					else{
+						cssparam.transform = 'translate3d(' + translateX + ', ' + translateY + ', 0) ';
+					}
 				}
 			}
 			
