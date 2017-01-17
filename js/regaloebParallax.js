@@ -28,24 +28,6 @@
 		
 	$(document).ready(function () {
 		
-		//js-window-height
-		var slideHeight = function(){		
-			$('.js-height').each(function(){
-				if(!isMobile.any() && $(window).width() > 940){
-					var wH = $(window).height();
-					var ratio = $(this).attr('data-height-ratio') ? $(this).attr('data-height-ratio') : 1;
-					$(this).css('min-height', wH*ratio);
-				}
-				else{
-					$(this).css('min-height', '0');
-				}
-			});		
-		}
-		slideHeight();
-		$(window).bind('resizeEnd', function() {
-			slideHeight();
-		});
-		
 		$('.js-regaloeb-parallax').regaloebParallax();
 
 	});
