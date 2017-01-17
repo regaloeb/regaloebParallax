@@ -29,7 +29,7 @@
 				</p>
 				<h3>Déclarer les objets au domready</h3>
 				<p>
-					<i>$('.js-regaloeb-parallax trans').regaloebParallax();</i>
+					<i>$('.js-regaloeb-parallax').regaloebParallax();</i>
 				</p>
 				<h3>HTML</h3>
 				<p>
@@ -44,13 +44,14 @@
 					L'attribut <i>data-end="NUM"</i> indique à quel endroit du viewport l'objet atteint ses valeurs finales : 2 = au milieu, 3 = au 2/3, 1 au scroll 0. Valeur par défaut: 2.<br><br>
 					Lorsque l'élément arrive dans le viewport, la propriété prend la valeur INITIAL<br>
 					À l'endroit du viewport déterminé par data-end (au milieu par défaut), la propriété prend la valeur FINAL.<br><br>
-					Petit truc : en rajoutant une transition sur le transform et l'opacity, l'objet continue à "bouger" à la fin du scroll (plus ou moins longtemps selon la durée de la transition - ici : 0.3s).
+					Petit truc : en rajoutant une transition sur le transform et l'opacity, l'objet continue à "bouger" à la fin du scroll (plus ou moins longtemps selon la durée de la transition - ici : 0.3s).<br><br>
+					Github repository: <a href="https://github.com/regaloeb/regaloebParallax" target="_blank">https://github.com/regaloeb/regaloebParallax</a>
 				</p>
 				<div class="elt">
 					<img src="img/XL.png" alt="C'est ouam" class="js-regaloeb-parallax trans"
-					data-rotate="150#0">
+					data-rotate="360#0">
 					<p>
-						data-rotate="36#0"
+						data-rotate="360#0"
 					</p>
 				</div>
 				<div class="elt">
@@ -146,8 +147,8 @@
 						<strong>Avec un data-x="INITIAL#FINAL".</strong>
 					</p>
 					<div class="relative-cont">
-						<img src="img/XL.png" alt="C'est ouam" class="js-regaloeb-parallax trans left" data-x="350#0" data-o="0#1" data-end="1">
-						<img src="img/XL.png" alt="C'est ouam" class="js-regaloeb-parallax trans right" data-x="-350#0" data-o="0#1" data-end="1">
+						<img src="img/XL.png" alt="C'est ouam" class="js-regaloeb-parallax trans left" data-x="350#0" data-o="0#1" data-end="2">
+						<img src="img/XL.png" alt="C'est ouam" class="js-regaloeb-parallax trans right" data-x="-350#0" data-o="0#1" data-end="2">
 					</div>
 					<div class="bg-parallax js-regaloeb-parallax" style="background-image: url(img/bg-03.jpg)" data-x="-250#250" data-end="1"></div>
 				</div>
@@ -170,7 +171,8 @@
 				<div class="bg bg-test js-height bg-fixed bg-cover" style="background-image: url(img/bg-02.jpg); overflow: visible;">
 					<p>
 						Autre méthode <strong>bien plus simple car on n'utilise pas le plugin !!</strong> :<br>
-						Juste appliquer un background-fixed au conteneur !
+						Juste appliquer un background-fixed au conteneur !<br><br>
+						Mais beaucoup de mobiles ne comprennent pas le background-fixed (les nazes)...
 					</p>
 				</div>
 			</div>
